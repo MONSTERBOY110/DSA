@@ -1,0 +1,9 @@
+# 💻 C Programming
+*.exe
+*.o
+*.out
+*.obj
+*.gch
+
+# 🧪 Java Compiled Classes
+*.class
