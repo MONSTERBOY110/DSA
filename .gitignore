@@ -6,4 +6,8 @@
 *.gch
 
 # 🧪 Java Compiled Classes
+<<<<<<< HEAD
 *.class
+=======
+*.class
+>>>>>>> 98d777748eb0daf3a6097b1af4a7ded36d153d28
