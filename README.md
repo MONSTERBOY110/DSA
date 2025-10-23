@@ -21,7 +21,7 @@ This repository is a dedicated collection of **Data Structures and Algorithms** 
 
 - 🧠 To **strengthen my fundamentals** through structured practice  
 - 🧩 To **visualize algorithmic logic** through hands-on coding  
-- 📈 To **track my progress** as I prepare for coding interviews and GATE  
+- 📈 To **track my progress** as I prepare for coding interviews 
 
 ---
 
