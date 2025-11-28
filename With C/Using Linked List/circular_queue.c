@@ -4,12 +4,12 @@
 struct node {
     int data;
     struct node *next;
-};
+}N;
 
-struct node *front = NULL, *rear = NULL;
+N*front = NULL, *rear = NULL;
 
 void enqueue(int x) {
-    struct node *newnode = malloc(sizeof(struct node));
+    N*newnode = malloc(sizeof(struct node));
     newnode->data = x;
     newnode->next = NULL;
 
@@ -37,7 +37,7 @@ int dequeue() {
         free(front);
         front = rear = NULL;
     } else {
-        struct node *temp = front;
+        N*temp = front;
         val = temp->data;
         front = front->next;
         rear->next = front;
@@ -53,7 +53,7 @@ void display() {
         return;
     }
 
-    struct node *temp = front;
+    N*temp = front;
     printf("Queue: ");
 
     while (temp->next != front) {
