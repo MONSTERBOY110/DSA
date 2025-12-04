@@ -25,13 +25,19 @@ void createlist(int x)//n=3
             printf("\nMemory can't be allocated\n");
             return;
         }
-        if(i == 1)
-            temp = head = n;
+       if(i == 1)
+       {
+         head = temp = n;
+         n->next = NULL;
+       }
+       else
+       {
+         temp->next = n;
+         n->next = NULL;
+         temp = n;
+       }
         printf("Enter the data : ");
-        scanf("%d",&n->data); 
-        temp->next = n;    
-        n->next = NULL;                   
-        temp = n;                               
+        scanf("%d", &n->data);                        
     }
     traverse();
 }
