@@ -1,4 +1,4 @@
-// PREFIX TO INFIX CONVERSATION 👇
+// POSTFIX TO INFIX 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -43,23 +43,23 @@ int isOperator(char symbol)
     return 0;
 }
 
-void prefixToInfix(char prefix[], char infix[])
+void postfixToInfix(char postfix[], char infix[])
 {
-    int i, len = strlen(prefix);
+    int i = 0, len = strlen(postfix);
     char operand1[MAX_SIZE], operand2[MAX_SIZE], temp[MAX_SIZE];
 
-    for (i = len - 1; i >= 0; i--)
+    for (i = 0; i < len; i++)
     {
-        if (isOperator(prefix[i]))
+        if (isOperator(postfix[i]))
         {
-            pop(operand1);
             pop(operand2);
-            sprintf(temp, "(%s%c%s)", operand1, prefix[i], operand2);
+            pop(operand1);
+            sprintf(temp, "(%s%c%s)", operand1, postfix[i], operand2);
             push(temp);
         }
         else
         {
-            sprintf(temp, "%c", prefix[i]);
+            sprintf(temp, "%c", postfix[i]);
             push(temp);
         }
     }
@@ -68,12 +68,12 @@ void prefixToInfix(char prefix[], char infix[])
 
 int main()
 {
-    char prefix[MAX_SIZE], infix[MAX_SIZE];
+    char postfix[MAX_SIZE], infix[MAX_SIZE];
 
-    printf("Enter prefix expression: ");
-    scanf("%s", prefix);
+    printf("Enter postfix expression: ");
+    scanf("%s", postfix);
 
-    prefixToInfix(prefix, infix);
+    postfixToInfix(postfix, infix);
     printf("Infix expression: %s\n", infix);
 
     return 0;
